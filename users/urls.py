@@ -3,11 +3,5 @@ from django.conf.urls import include, url
 from . import views
 
 
+urlpatterns = [path("register/", views.Register.as_view(), name="register")]
 
-app_name = 'users'
-
-urlpatterns = [
-    path('event-finder/', include('eventFinderApp.urls')),
-    path('register/', views.Register.as_view(), name='register'),
-    path('users/', include('django.contrib.auth.urls')),
-   ]
